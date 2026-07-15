@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenery Co. | Premium Houseplants</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#" class="logo"><i class="fa-solid fa-leaf"></i> Greenery Co. <span class="brand-sub">by KR</span></a>
+            <nav class="nav-links">
+                <a href="#shop" class="nav-link active">Shop Plants</a>
+                <a href="#care" class="nav-link">Plant Care</a>
+                <a href="#about" class="nav-link">Our Story</a>
+            </nav>
+            <div class="header-actions">
+                <button class="cart-btn" id="cartBtn">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-badge" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-tag">🌿 Bring Nature Inside</span>
+            <h1>Transform Your Home Into A Vibrant Jungle</h1>
+            <p>Handpicked, healthy indoor plants delivered straight from our greenhouse to your doorstep. Free shipping on orders over $50.</p>
+            <a href="#shop" class="cta-btn scroll-trigger">Explore Plants <i class="fa-solid fa-arrow-down"></i></a>
+        </div>
+        <div class="hero-image animate-pop">
+            <img src="https://images.unsplash.com/photo-1545241047-6083a3684587?auto=format&fit=crop&w=800&q=80" alt="Beautiful indoor plants">
+        </div>
+    </section>
+
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart" id="closeCart"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-msg">Your shopping bag is empty!</div>
+        </div>
+        <div class="cart-footer">
+            <div class="subtotal">
+                <span>Subtotal:</span>
+                <span id="cartTotalValue">$0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="alert('Proceeding to checkout...')">Checkout Now</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <section class="shop-section" id="shop">
+        <div class="section-title">
+            <h2>Our Best Sellers</h2>
+            <p>Fresh, healthy, and extremely easy to care for.</p>
+        </div>
+
+        <div class="plants-grid">
+            <div class="plant-card" data-id="1" data-name="Monstera Deliciosa" data-price="29.99">
+                <div class="plant-img-container">
+                    <img src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=600&q=80" alt="Monstera Deliciosa">
+                    <span class="badge sale">Popular</span>
+                </div>
+                <div class="plant-info">
+                    <h3>Monstera Deliciosa</h3>
+                    <p class="plant-desc">Vibrant, iconic split leaves.</p>
+                    <div class="plant-bottom">
+                        <span class="price">$29.99</span>
+                        <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i> Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="plant-card" data-id="2" data-name="Snake Plant Laurentii" data-price="19.99">
+                <div class="plant-img-container">
+                    <img src="https://images.unsplash.com/photo-1506543730435-e2c37db22994?auto=format&fit=crop&w=600&q=80" alt="Snake Plant">
+                </div>
+                <div class="plant-info">
+                    <h3>Snake Plant Laurentii</h3>
+                    <p class="plant-desc">Thrives on neglect, cleans the air.</p>
+                    <div class="plant-bottom">
+                        <span class="price">$19.99</span>
+                        <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i> Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="plant-card" data-id="3" data-name="Fiddle Leaf Fig" data-price="39.99">
+                <div class="plant-img-container">
+                    <img src="https://images.unsplash.com/photo-1597055181300-e3633a207518?auto=format&fit=crop&w=600&q=80" alt="Fiddle Leaf Fig">
+                </div>
+                <div class="plant-info">
+                    <h3>Fiddle Leaf Fig</h3>
+                    <p class="plant-desc">Stately plant with gorgeous lush leaves.</p>
+                    <div class="plant-bottom">
+                        <span class="price">$39.99</span>
+                        <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i> Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="plant-card" data-id="4" data-name="Calathea Orbifolia" data-price="24.99">
+                <div class="plant-img-container">
+                    <img src="https://images.unsplash.com/photo-1545241047-41e98a764375?auto=format&fit=crop&w=600&q=80" alt="Calathea Orbifolia">
+                    <span class="badge safe">Pet Safe</span>
+                </div>
+                <div class="plant-info">
+                    <h3>Calathea Orbifolia</h3>
+                    <p class="plant-desc">Beautiful oversized striped leaves.</p>
+                    <div class="plant-bottom">
+                        <span class="price">$24.99</span>
+                        <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i> Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="plant-card" data-id="5" data-name="ZZ Plant Raven" data-price="22.99">
+                <div class="plant-img-container">
+                    <img src="https://images.unsplash.com/photo-1632207691143-643e2a9a9361?auto=format&fit=crop&w=600&q=80" alt="ZZ Plant">
+                </div>
+                <div class="plant-info">
+                    <h3>ZZ Plant Raven</h3>
+                    <p class="plant-desc">Glossy dark leaves, virtually indestructible.</p>
+                    <div class="plant-bottom">
+                        <span class="price">$22.99</span>
+                        <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i> Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="plant-card" data-id="6" data-name="Golden Pothos" data-price="14.99">
+                <div class="plant-img-container">
+                    <img src="https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?auto=format&fit=crop&w=600&q=80" alt="Golden Pothos">
+                    <span class="badge sale">Sale</span>
+                </div>
+                <div class="plant-info">
+                    <h3>Golden Pothos</h3>
+                    <p class="plant-desc">Beautiful trailing vine, fast growing.</p>
+                    <div class="plant-bottom">
+                        <span class="price"><span class="old-price">$18.99</span> $14.99</span>
+                        <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i> Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="care-section" id="care">
+        <div class="section-title">
+            <h2>Plant Care Made Easy</h2>
+            <p>Follow these three golden rules to keep your plants thriving.</p>
+        </div>
+        <div class="care-grid">
+            <div class="care-card">
+                <div class="care-icon"><i class="fa-solid fa-droplet"></i></div>
+                <h3>Water Wisely</h3>
+                <p>Most plants prefer drying out between waterings. Stick your finger 2 inches into the soil; if dry, it's time to water.</p>
+            </div>
+            <div class="care-card">
+                <div class="care-icon"><i class="fa-solid fa-sun"></i></div>
+                <h3>Indirect Light</h3>
+                <p>Bright, indirect sunlight is the sweet spot. Avoid direct midday sun to prevent leaf scorching.</p>
+            </div>
+            <div class="care-card">
+                <div class="care-icon"><i class="fa-solid fa-temperature-half"></i></div>
+                <h3>Keep Warm</h3>
+                <p>Indoor plants love stable temperatures between 18°C and 24°C. Avoid keeping them near AC vents or drafts.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <div class="about-text">
+                <span class="hero-tag">🌱 Our Story</span>
+                <h2>Grown With Love, Delivered With Care</h2>
+                <p>Greenery Co. started in 2026 as a small greenhouse project with one simple mission: to make urban spaces healthier and happier. We believe that everyone should enjoy the physical and mental benefits of living alongside nature.</p>
+                <p>Every single plant we sell is carefully nurtured, inspected for health, and securely packed to ensure it arrives at your home in pristine condition.</p>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1530079037462-be09c32b03b1?auto=format&fit=crop&w=800&q=80" alt="Our greenhouse">
+            </div>
+        </div>
+    </section>
+
+     <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 Greenery Co. All rights reserved.</p>
+            <p class="credits">Developed as a Portfolio Project by <span class="developer-name">Kyrillos Remon</span></p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
