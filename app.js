@@ -2,6 +2,7 @@ const cartBtn = document.getElementById('cartBtn');
 const cartDrawer = document.getElementById('cartDrawer');
 const closeCart = document.getElementById('closeCart');
 const cartOverlay = document.getElementById('cartOverlay');
+const checkoutBtn = document.getElementById('checkoutBtn');
 
 const addButtons = document.querySelectorAll('.add-to-cart-btn');
 const cartItemsContainer = document.getElementById('cartItems');
@@ -18,6 +19,12 @@ function toggleCart() {
 if (cartBtn) cartBtn.addEventListener('click', toggleCart);
 if (closeCart) closeCart.addEventListener('click', toggleCart);
 if (cartOverlay) cartOverlay.addEventListener('click', toggleCart);
+
+if (checkoutBtn) {
+    checkoutBtn.addEventListener('click', () => {
+        alert("ℹ️ Portfolio Project Notice:\n\nThis is a frontend demo website built for presentation purposes. Checkout forms, payment integration, and backend ordering are not active on this version.");
+    });
+}
 
 addButtons.forEach(button => {
     button.addEventListener('click', (e) => {
@@ -42,7 +49,16 @@ function addToCart(id, name, price, image) {
     toggleCart(); 
 }
 
-window.removeFromCart = function(id) {
+if (cartItemsContainer) {
+    cartItemsContainer.addEventListener('click', (e) => {
+        if (e.target.classList.contains('remove-btn')) {
+            const id = e.target.getAttribute('data-id');
+            removeFromCart(id);
+        }
+    });
+}
+
+function removeFromCart(id) {
     cart = cart.filter(item => item.id !== id);
     saveAndRender();
 }
@@ -77,7 +93,7 @@ function renderCart() {
                     <h4>${item.name}</h4>
                     <p>$${item.price.toFixed(2)} &times; ${item.quantity}</p>
                 </div>
-                <button class="remove-btn" onclick="removeFromCart('${item.id}')">Remove</button>
+                <button class="remove-btn" data-id="${item.id}">Remove</button>
             </div>
         `;
         cartItemsContainer.insertAdjacentHTML('beforeend', itemMarkup);
@@ -88,6 +104,8 @@ function renderCart() {
 }
 
 const navLinks = document.querySelectorAll('.nav-link');
+const sections = document.querySelectorAll('section[id]');
+
 navLinks.forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
@@ -97,11 +115,30 @@ navLinks.forEach(link => {
         if (targetSection) {
             targetSection.scrollIntoView({ behavior: 'smooth' });
         }
-
-        navLinks.forEach(l => l.classList.remove('active'));
-        this.classList.add('active');
     });
 });
+
+const observerOptions = {
+    root: null,
+    rootMargin: '-50% 0px -50% 0px', 
+    threshold: 0
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${id}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    });
+}, observerOptions);
+
+sections.forEach(section => observer.observe(section));
 
 const heroBtn = document.querySelector('.scroll-trigger');
 if (heroBtn) {

@@ -29,7 +29,7 @@
         </div>
     </header>
 
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="hero-content">
             <span class="hero-tag">🌿 Bring Nature Inside</span>
             <h1>Transform Your Home Into A Vibrant Jungle</h1>
@@ -37,7 +37,7 @@
             <a href="#shop" class="cta-btn scroll-trigger">Explore Plants <i class="fa-solid fa-arrow-down"></i></a>
         </div>
         <div class="hero-image animate-pop">
-            <img src="https://images.unsplash.com/photo-1545241047-6083a3684587?auto=format&fit=crop&w=800&q=80" alt="Beautiful indoor plants">
+            <img src="https://images.unsplash.com/photo-1545241047-6083a3684587?auto=format&fit=crop&q=80&w=800" alt="Beautiful indoor plants">
         </div>
     </section>
 
@@ -54,7 +54,7 @@
                 <span>Subtotal:</span>
                 <span id="cartTotalValue">$0.00</span>
             </div>
-            <button class="checkout-btn" onclick="alert('Proceeding to checkout...')">Checkout Now</button>
+            <button class="checkout-btn" id="checkoutBtn">Checkout Now</button>
         </div>
     </div>
     <div class="cart-overlay" id="cartOverlay"></div>
@@ -66,9 +66,9 @@
         </div>
 
         <div class="plants-grid">
-            <div class="plant-card" data-id="1" data-name="Monstera Deliciosa" data-price="29.99">
+            <article class="plant-card" data-id="1" data-name="Monstera Deliciosa" data-price="29.99">
                 <div class="plant-img-container">
-                    <img src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=600&q=80" alt="Monstera Deliciosa">
+                    <img src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&q=80&w=600" alt="Monstera Deliciosa">
                     <span class="badge sale">Popular</span>
                 </div>
                 <div class="plant-info">
@@ -79,11 +79,11 @@
                         <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i> Add</button>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="plant-card" data-id="2" data-name="Snake Plant Laurentii" data-price="19.99">
+            <article class="plant-card" data-id="2" data-name="Snake Plant Laurentii" data-price="19.99">
                 <div class="plant-img-container">
-                    <img src="https://images.unsplash.com/photo-1506543730435-e2c37db22994?auto=format&fit=crop&w=600&q=80" alt="Snake Plant">
+                    <img src="https://images.unsplash.com/photo-1506543730435-e2c37db22994?auto=format&fit=crop&q=80&w=600" alt="Snake Plant">
                 </div>
                 <div class="plant-info">
                     <h3>Snake Plant Laurentii</h3>
@@ -93,11 +93,11 @@
                         <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i> Add</button>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="plant-card" data-id="3" data-name="Fiddle Leaf Fig" data-price="39.99">
+            <article class="plant-card" data-id="3" data-name="Fiddle Leaf Fig" data-price="39.99">
                 <div class="plant-img-container">
-                    <img src="https://images.unsplash.com/photo-1597055181300-e3633a207518?auto=format&fit=crop&w=600&q=80" alt="Fiddle Leaf Fig">
+                    <img src="https://images.unsplash.com/photo-1597055181300-e3633a207518?auto=format&fit=crop&q=80&w=600" alt="Fiddle Leaf Fig">
                 </div>
                 <div class="plant-info">
                     <h3>Fiddle Leaf Fig</h3>
@@ -107,11 +107,11 @@
                         <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i> Add</button>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="plant-card" data-id="4" data-name="Calathea Orbifolia" data-price="24.99">
+            <article class="plant-card" data-id="4" data-name="Calathea Orbifolia" data-price="24.99">
                 <div class="plant-img-container">
-                    <img src="https://images.unsplash.com/photo-1545241047-41e98a764375?auto=format&fit=crop&w=600&q=80" alt="Calathea Orbifolia">
+                    <img src="https://images.unsplash.com/photo-1545241047-41e98a764375?auto=format&fit=crop&q=80&w=600" alt="Calathea Orbifolia">
                     <span class="badge safe">Pet Safe</span>
                 </div>
                 <div class="plant-info">
@@ -122,11 +122,11 @@
                         <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i> Add</button>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="plant-card" data-id="5" data-name="ZZ Plant Raven" data-price="22.99">
+            <article class="plant-card" data-id="5" data-name="ZZ Plant Raven" data-price="22.99">
                 <div class="plant-img-container">
-                    <img src="https://images.unsplash.com/photo-1632207691143-643e2a9a9361?auto=format&fit=crop&w=600&q=80" alt="ZZ Plant">
+                    <img src="https://images.unsplash.com/photo-1632207691143-643e2a9a9361?auto=format&fit=crop&q=80&w=600" alt="ZZ Plant">
                 </div>
                 <div class="plant-info">
                     <h3>ZZ Plant Raven</h3>
@@ -136,11 +136,11 @@
                         <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i> Add</button>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="plant-card" data-id="6" data-name="Golden Pothos" data-price="14.99">
+            <article class="plant-card" data-id="6" data-name="Golden Pothos" data-price="14.99">
                 <div class="plant-img-container">
-                    <img src="https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?auto=format&fit=crop&w=600&q=80" alt="Golden Pothos">
+                    <img src="https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?auto=format&fit=crop&q=80&w=600" alt="Golden Pothos">
                     <span class="badge sale">Sale</span>
                 </div>
                 <div class="plant-info">
@@ -151,7 +151,7 @@
                         <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i> Add</button>
                     </div>
                 </div>
-            </div>
+            </article>
         </div>
     </section>
 
@@ -184,11 +184,11 @@
             <div class="about-text">
                 <span class="hero-tag">🌱 Our Story</span>
                 <h2>Grown With Love, Delivered With Care</h2>
-                <p>Greenery Co. started in 2026 as a small greenhouse project with one simple mission: to make urban spaces healthier and happier. We believe that everyone should enjoy the physical and mental benefits of living alongside nature.</p>
+                <p>Greenery Co. started as a small greenhouse project with one simple mission: to make urban spaces healthier and happier. We believe that everyone should enjoy the physical and mental benefits of living alongside nature.</p>
                 <p>Every single plant we sell is carefully nurtured, inspected for health, and securely packed to ensure it arrives at your home in pristine condition.</p>
             </div>
             <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1530079037462-be09c32b03b1?auto=format&fit=crop&w=800&q=80" alt="Our greenhouse">
+                <img src="https://images.unsplash.com/photo-1530079037462-be09c32b03b1?auto=format&fit=crop&w=800" alt="Our greenhouse">
             </div>
         </div>
     </section>
